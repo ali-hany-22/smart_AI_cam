@@ -37,63 +37,43 @@ SMART_AI_CAM_R/
 │   ├── style.css                # Futuristic Visual Design
 │   └── script.js                # WebSocket & Real-time SVG Hand Visualization
 └── 📂 test/                     # Unit Tests & Debugging Tools
-🚀 Key Features
-📡 1. Advanced Hand Tracking
 
-Powered by Google MediaPipe, the system tracks 21 hand landmarks in 3D space. It calculates finger states (Open/Closed) and translates them into system actions with sub-20ms latency.
-✍️ 2. Interactive Teaching Mode
 
-Transform any space into a smart classroom:
 
-    Air Writing: Draw on the screen using your index finger.
 
-    Virtual Keyboard: Type text in mid-air and reposition it using drag-and-drop gestures.
 
-    Dynamic Palettes: Change ink colors and stroke thickness via specific hand signs.
 
-🎥 3. Smart Media Control (Live Mode)
-
-    Smooth Pinch-to-Zoom: A digital zoom mechanism with exponential smoothing for professional-grade transitions.
-
-    Gesture Snapshots: Capture high-resolution images using a "Thumbs Up" gesture.
-
-    Remote Recording: Start/Stop video recording using the "Peace" sign.
-
-⚙️ 4. Hardware Tracking (ESP32 Integration)
-
-The gesture_drive module analyzes the hand's spatial coordinates and transmits directional commands (Right, Left, Stop) via Serial to an ESP32, which drives a Pan-Servo motor to keep the user in the frame.
 🛠️ Installation & Setup
-1. Prerequisites
-
-    OS: Ubuntu 22.04+ (Recommended for optimal V4L2 performance).
-
-    Environment: Python 3.10+.
-
-    Hardware: ESP32 + SG90/MG90 Servo Motor.
-
-2. Software Setup
+1. Clone the repository
 Bash
 
-# Clone the repository
-git clone https://github.com/ali-hany-22/smart_AI_cam.git
+git clone [https://github.com/ali-hany-22/smart_AI_cam.git](https://github.com/ali-hany-22/smart_AI_cam.git)
 cd SMART_AI_CAM_R
 
-# Install required packages
-pip install opencv-python mediapipe fastapi uvicorn python-socketio pyserial numpy
+2. Set up Virtual Environment (Recommended)
+Bash
 
-3. Execution
+# Create venv
+python3 -m venv venv
+
+# Activate venv
+# On Linux/macOS:
+source venv/bin/activate
+# On Windows:
+# .\venv\Scripts\activate
+
+3. Install Dependencies
+Bash
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+4. Execution
 
     Connect the ESP32 via USB.
 
-    Grant Serial permissions: sudo chmod 666 /dev/ttyUSB0.
+    Grant Serial permissions (Linux): sudo chmod 666 /dev/ttyUSB0.
 
     Run the backend: python3 backend/app.py.
 
     Open frontend/index.html in a modern browser.
-
-
-🛡️ License
-
-This project is open-source and available under the MIT License.
-
-Don't forget to add a screenshot of your Cyberpunk dashboard here! It will make the project stand out even more. 🦾🚀
