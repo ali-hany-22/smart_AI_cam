@@ -1,0 +1,16 @@
+# --- Core Computer Vision ---
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+numpy>=1.24.0
+
+# --- Backend & API ---
+fastapi>=0.100.0
+uvicorn>=0.22.0
+python-socketio>=5.8.0
+python-multipart>=0.0.6
+
+# --- Hardware Communication ---
+pyserial>=3.5
+
+# --- Utilities ---
+aiofiles>=23.1.0
