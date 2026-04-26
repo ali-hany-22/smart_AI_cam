@@ -47,7 +47,7 @@ SMART_AI_CAM_R/
 1. Clone the repository
 Bash
 
-git clone [https://github.com/ali-hany-22/smart_AI_cam.git](https://github.com/ali-hany-22/smart_AI_cam.git)
+git clone [https://github.com/ali-hany-22/smart_AI_cam.git]
 cd SMART_AI_CAM_R
 
 2. Set up Virtual Environment (Recommended)
